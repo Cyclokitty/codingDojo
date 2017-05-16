@@ -65,8 +65,14 @@ function fitTheFirstValue(arr) {
 
 fitTheFirstValue([12, 4, 9]);
 
-function fahToCel(temp) {
+function celToFah(temp) {
   return temp * 9 / 5 + 32;
 }
 
-fahToCel(19);
+celToFah(19);
+
+function fahToCel(temp) {
+  return (temp - 32) * 9 / 5;
+}
+
+fahToCel(32);
