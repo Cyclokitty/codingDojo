@@ -76,3 +76,73 @@ function fahToCel(temp) {
 }
 
 fahToCel(32);
+
+function biggieSize(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      arr[i] = 'big';
+    }
+  }
+  return arr;
+}
+
+biggieSize([-1, 3, 5, -5]);
+
+function printLowReturnHigh(arr) {
+  console.log(Math.min.apply(null,arr));
+  return Math.max.apply(null, arr);
+}
+
+printLowReturnHigh([2, 1, 9]);
+
+function printOnReturnAnother(arr) {
+  console.log(arr[arr.length - 2]);
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+      return arr[i];
+    }
+  }
+}
+
+printOnReturnAnother([10, 3, 7, 8, 9]);
+
+function doubleVision(arr) {
+  const double = [];
+  for (var i = 0; i < arr.length; i++) {
+    double.push(arr[i] * 2);
+  }
+  return double;
+}
+
+doubleVision([2, 3, 4, 5]);
+
+function countPositives(arr) {
+  var total = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      total += arr[i];
+    }
+  }
+  arr[arr.length - 1] = total;
+  return arr;
+}
+
+countPositives([-1, 1, 1, 1]);
+
+function evenOdds(arr) {
+  var oddCounter = 0;
+  var evenCounter = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0 && evenCounter !== 3) {
+     evenCounter++;
+    } else if (evenCounter === 3) {
+      console.log("Even more so!");
+    } else if (arr[i] % 2 !== 0 && oddCounter !== 3) {
+      oddCounter++;
+    } else if (oddCounter === 3) {
+      console.log('That\'s Odd!');
+    }
+  }
+}
+
+evenOdds([2, 3, 5, 9, 7]);
