@@ -146,3 +146,61 @@ function evenOdds(arr) {
 }
 
 evenOdds([2, 3, 5, 9, 7]);
+
+function incrementSeconds(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (i % 2 !== 0) {
+      arr[i]++;
+      console.log(arr[i]);
+    } else {
+      console.log(arr[i]);
+    }
+  }
+  return arr;
+}
+
+incrementSeconds([5, 10, 15, 20, 25, 30, 35, 40]);
+
+function previousLength(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (i === 0) {
+      arr[i] = i;
+    } else {
+      arr[i] = i - 1;
+    }
+  }
+  return arr;
+}
+
+previousLength(['cat', 'dog', 'hamster', 'pony', 'gopher']);
+
+function addSeven(arr) {
+  var newArr = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (i === 0) {
+      continue;
+    } else {
+      newArr.push(arr[i] + 7);
+    }
+  }
+  return newArr;
+}
+
+addSeven([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+function reverse(arr) {
+  return arr.reverse();
+}
+
+reverse([1, 2, 3, 4, 5]);
+
+function negative(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      arr[i] = -Math.abs(arr[i]);
+    }
+  }
+  return arr;
+}
+
+negative([1, -3, 5]);
