@@ -204,3 +204,27 @@ function negative(arr) {
 }
 
 negative([1, -3, 5]);
+
+function alwaysHungry(arr) {
+  if (!arr.includes('food')) {
+    return 'I\'m hungry';
+  } else {
+      for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === 'food') {
+        arr[i] = 'yummy!';
+      }
+    }
+    return arr;
+  }
+}
+
+alwaysHungry(['wee', 'woo', 'tag', 'far', 'flum']);
+
+function scaleTheArray(arr, num) {
+  for (var i = 0; i < arr.length; i++) {
+    arr[i] *= num;
+  }
+  return arr;
+}
+
+scaleTheArray([1, 2, 3, 4, 5], 3);
