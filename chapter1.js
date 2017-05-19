@@ -228,3 +228,52 @@ function scaleTheArray(arr, num) {
 }
 
 scaleTheArray([1, 2, 3, 4, 5], 3);
+
+function keepFew(arr, short) {
+  var shortened = arr.length - short;
+  return arr.splice(shortened);
+}
+
+keepFew([2, 4, 6, 8, 10, 12, 14, 16, 18], 3);
+
+// The basic 13 algos
+
+function print1To255() {
+  for (var i = 1; i <= 255; i++) {
+    console.log(i);
+  }
+}
+
+print1To255();
+
+function printIntsAndSum() {
+  var total = 0;
+  for (var i = 0; i <= 255; i++) {
+    total += i;
+    console.log(i, total);
+  }
+}
+
+printIntsAndSum();
+
+function oddsArray() {
+  for (var i = 0; i <= 255; i++) {
+    if (i % 2 !== 0) {
+      console.log(i);
+    }
+  }
+}
+
+oddsArray();
+
+function greaterThanY(arr, y) {
+  var counter = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > y) {
+      counter++;
+    }
+  }
+  return counter;
+}
+
+greaterThanY([2, 4, 6, 8, 10], 5);
