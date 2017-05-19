@@ -257,12 +257,16 @@ function printIntsAndSum() {
 printIntsAndSum();
 
 function oddsArray() {
-  for (var i = 0; i <= 255; i++) {
+  var odd = [];
+  for (var i = 1; i <= 255; i++) {
     if (i % 2 !== 0) {
-      console.log(i);
+      odd.push(i);
     }
   }
+  return odd;
 }
+
+oddsArray();
 
 oddsArray();
 
@@ -277,3 +281,82 @@ function greaterThanY(arr, y) {
 }
 
 greaterThanY([2, 4, 6, 8, 10], 5);
+
+function maxMinAverage(arr) {
+  var total = 0;
+  console.log('Smallest num: ', Math.min.apply(null, arr));
+  console.log('Largest num: ', Math.max.apply(null, arr));
+  for (var i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  console.log('Average num: ', total / arr.length);
+}
+
+maxMinAverage([10, 5, 8, 23, 2]);
+
+function swapString(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] < 0) {
+      arr[i] = 'Dojo!';
+    }
+  }
+  return arr;
+}
+
+swapString([10, 8, 4, -4, 19]);
+
+function printOdds() {
+  for (var i = 1; i <= 255; i++) {
+    if (i % 2 !== 0) {
+      console.log(i);
+    }
+  }
+}
+
+printOdds();
+
+function printArrayValues(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+  }
+}
+
+printArrayValues(['cat', 'dog', 'hamster', 'hedgehog', 'guinea pig', 'gecko']);
+
+function printAverageOfArray(arr) {
+  var total = 0;
+  for (var i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  console.log('Average is ' + total / arr.length);
+}
+
+printAverageOfArray([10, 20, 30, 40, 50]);
+
+function square(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    arr[i] *= arr[i];
+  }
+  return arr;
+}
+
+square([2, 3, 4])
+
+function zeroOutZeros(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] < 0) {
+      arr[i] = 0;
+    }
+  }
+  return arr;
+}
+
+zeroOutZeros([3, 4, -7, -9, 10]);
+
+function shiftArrayValuesLeft(arr) {
+  arr.shift();
+  arr.push(0);
+  return arr;
+}
+
+shiftArrayValuesLeft(['cat', 'dog', 'hamster', 'hedgehog', 'guinea pig', 'gecko']);
