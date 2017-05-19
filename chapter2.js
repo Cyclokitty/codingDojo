@@ -39,3 +39,25 @@ function drawCenteredStars(num) {
 }
 
 drawCenteredStars(15)
+
+function drawLeftChar(num, char) {
+  console.log(char.repeat(num));
+}
+
+drawLeftChar(37, '&');
+
+function drawRightChar(num, char) {
+  var standard = 75;
+  console.log(' '.repeat(standard - num) + char.repeat(num));
+}
+
+drawRightChar(37, '^');
+
+function drawCenteredChar(num, char) {
+  var standard = 75;
+  var leftHand = 75 / 2;
+  var rightHand = 75 / 2;
+  console.log(' '.repeat(leftHand - (num / 2)) + char.repeat(num) + ' '.repeat(rightHand - (num / 2)));
+}
+
+drawCenteredChar(15, '@')
