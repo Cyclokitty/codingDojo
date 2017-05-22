@@ -46,3 +46,14 @@ function removeShortStrings(str, val) {
 }
 
 removeShortStrings('get a job, stay out of the forest, buy your own shit', 3);
+
+function reverse(str) {
+  var backwords = [];
+  str = str.split('');
+  for (var i = str.length; i >= 0; i--) {
+    backwords.push(str[i]);
+  }
+  return backwords.join('');
+}
+
+reverse('creature');
