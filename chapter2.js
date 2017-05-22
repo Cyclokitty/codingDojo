@@ -140,3 +140,52 @@ function messyMath(num) {
 }
 
 messyMath(15);
+
+function twelveBarBlues() {
+  for (var i = 1; i <= 12; i++ ) {
+    console.log(`${i} chick boom chick`);
+  }
+}
+
+twelveBarBlues();
+
+function fibonacci(num) {
+  var fibo = [0, 1];
+  var i = 0;
+  while (i <= num) {
+    fibo.push(fibo[i] + fibo[i + 1]);
+    i++;
+  }
+  return fibo;
+}
+
+fibonacci(15);
+
+function sumToOneDigit(num) {
+  num = Math.floor(num);
+  var sum = 0;
+  while ( num > 0) {
+    sum += num % 10;
+    num = Math.floor(num / 10);
+    console.log(sum + " " + num)
+  }
+  if (sum > 9) {
+    return sumToOneDigit(sum);
+  } else {
+    return sum;
+  }
+}
+
+
+sumToOneDigit(928);
+
+function isPrime(num) {
+  for (var i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
+
+isPrime(9);
