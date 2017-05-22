@@ -50,10 +50,23 @@ removeShortStrings('get a job, stay out of the forest, buy your own shit', 3);
 function reverse(str) {
   var backwords = [];
   str = str.split('');
-  for (var i = str.length; i >= 0; i--) {
+  for (var i = str.length - 1; i >= 0; i--) {
     backwords.push(str[i]);
   }
   return backwords.join('');
 }
 
 reverse('creature');
+
+function oddStrings(str) {
+  var odds = [];
+  str = str.split(' ');
+  for (var i = 0; i < str.length; i++) {
+    if (str[i].length % 2 !== 0) {
+      odds.push(str[i]);
+    }
+  }
+  return odds.join(' ');
+}
+
+oddStrings("Nope! Its Kris string with K! Instead of Chris with C.");
