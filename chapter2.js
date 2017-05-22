@@ -189,3 +189,21 @@ function isPrime(num) {
 }
 
 isPrime(9);
+
+function sweatshirtPricing(num) {
+  var price = 20;
+  var discount2 = 0.09;
+  var discount3 = 0.19;
+  var discount4OrMore = 0.35;
+  if (num === 1) {
+    return price;
+  } else if (num === 2) {
+    return Math.ceil((price * 2) - (price * 2) * discount2);
+  } else if (num === 3) {
+    return Math.ceil((price * 3) - (price * 3) * discount3);
+  } else if (num >= 4) {
+    return Math.ceil((price * 4) - (price * 4) * discount4OrMore);
+  }
+}
+
+sweatshirtPricing(4);
