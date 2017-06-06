@@ -70,3 +70,23 @@ function oddStrings(str) {
 }
 
 oddStrings("Nope! Its Kris string with K! Instead of Chris with C.");
+
+function getJiggy(name) {
+  name = name.split('');
+  var first = name.splice(0, 1);
+  var end = name.splice(0, name.length);
+  end[0] = end[0].toUpperCase();
+  return end.join('') + " to the " + first + "!";
+}
+
+getJiggy('Dylan');
+
+function arrayToObject(arr1, arr2) {
+  var obj = {};
+  for (var i = 0; i < arr1.length; i++) {
+    obj[arr1[i]] = arr2[i];
+  }
+  return obj;
+}
+
+arrayToObject(['abc', 'goat', 'yo'], [42, 'wassup', true]);
