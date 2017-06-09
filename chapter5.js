@@ -38,3 +38,69 @@ console.log(cats.add('Munro'));
 
 cats.add('Sylvia');
 console.log(cats);
+
+// The Buggy 13:
+
+function print1To255() {
+  var num = 1;
+  while (num < 255) {
+    console.log(num);
+    num++;
+  }
+}
+
+// correction: print all integers to 255:
+function print1To255() {
+  var num = 1;
+  while (num <= 255) {
+    console.log(num);
+    num++;
+  }
+}
+
+print1To255();
+
+// prints integers from 0 to 255 and the sum so far:
+function printIntsAndSum0to255() {
+  var sum = 0;
+  for (var num = 0; num <= 255; num++) {
+    {sum += num;}
+    return sum;
+  }
+}
+
+//correction:
+function printIntsAndSum0to255() {
+  var sum = 0;
+  for (var num = 0; num <= 255; num++) {
+    sum += num;
+    console.log(num + " " + sum);
+  }
+  return sum;
+}
+
+printIntsAndSum0to255();
+
+// print the largest element in a given arrayToObject
+function printMaxOfArray(arr) {
+  if (arr.length === 0) {
+    console.log('[], no max value');
+    return;
+  }
+  var max = 0;
+  for (var idx = 0; idx < arr.length; idx++) {
+    if (arr[idx] > max) {
+      max = arr[idx];
+    }
+  }
+  console.log('Max val is: ', max);
+}
+
+// this is fine but this is less typy:
+function printMaxOfArray(arr) {
+  if (arr.length === 0) {
+    console.log('[], no max value');
+    return;
+  }
+  return Math.max.apply(null, arr);
+}
