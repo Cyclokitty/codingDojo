@@ -181,3 +181,172 @@ function printAverageOfArray(array) {
 }
 
 printAverageOfArray(arr);
+
+// create an return array with odd integers rom 1 to 255
+
+function returnOddsArray1to255() {
+  var oddArray = [];
+  for (var num = 1; num <= 255; num += 2) {
+    oddArray.push(num);
+  }
+}
+
+// correction: need to return oddArray after the for loop
+
+function returnOddsArray1to255() {
+  var oddArray = [];
+  for (var num = 1; num <= 255; num += 2) {
+    oddArray.push(num);
+  }
+  return oddArray;
+}
+
+returnOddsArray1to255();
+
+// given an array, return count greater than y
+
+function countGreaterThanY(arr, y) {
+  var numGreater = 0;
+  for (var idx = 0; idx < arr.length; idx++) {
+    if (arr[idx] > y) {
+      numGreater++;
+    }
+  }
+  return arr[y]l
+}
+
+// correction: return numGreater because it holds the number of times an item in arr is greater than y
+
+function countGreaterThanY(arr, y) {
+  var numGreater = 0;
+  for (var idx = 0; idx < arr.length; idx++) {
+    if (arr[idx] > y) {
+      numGreater++;
+    }
+  }
+  return numGreater;
+}
+
+countGreaterThanY([10, 20, 30, 40, 50], 25);
+
+// print the max, min, and average array values:
+function printMaxMinAverage(arr) {
+  if (arr.length === 0) {
+    return;
+  }
+  var min = arr[0];
+  var max = arr[0];
+  var sum = arr[0];
+  for (var idx = 1; idx <= arr.length; idx++) {
+    if (arr[idx] < min) {
+      min = arr[idx];
+    }
+    if (arr[idx] > max) {
+      max = arr[idx];
+    }
+    sum += arr[idx];
+  }
+  return min;
+  return max;
+  return avg;
+}
+
+// corrections: set idx to 0 and not 1, idx < arr.length, avg was not calculated, can't return after return min so changed it to an objects
+function printMaxMinAverage(arr) {
+  if (arr.length === 0) {
+    return;
+  }
+  var min = arr[0];
+  var max = arr[0];
+  var sum = 0;
+  for (var idx = 0; idx < arr.length; idx++) {
+    if (arr[idx] < min) {
+      min = arr[idx];
+    }
+    if (arr[idx] > max) {
+      max = arr[idx];
+    }
+    sum += arr[idx];
+  }
+  return {
+    min,
+    max,
+    avg: sum / arr.length
+  };
+}
+
+printMaxMinAverage([10, 20, 30, 40, 50]);
+
+// given an array, square each value in the array
+function squareArrVals(arr) {
+  for (var idx = 0; idx < arr.length; idx++) {
+    arr[idx] = arr[idx] + arr[idx];
+  }
+}
+
+// corrections: changed the operator to * because we want the square and not the sum, and returned the array after the for loop
+
+function squareArrVals(arr) {
+  for (var idx = 0; idx < arr.length; idx++) {
+    arr[idx] = arr[idx] * arr[idx];
+  }
+  return arr;
+}
+
+squareArrVals([2,3,4]);
+
+// given an array, set negative values to zero
+zeroOutArrayNegativeVals(arr) {
+  for (var idx = 0; idx < arr.length; idx++) {
+    if (arr[idx] < 0) {
+      arr[idx] = 0;
+    }
+  }
+}
+
+// corrections: need function keyword, and need to return arr after the for loop
+
+function zeroOutArrayNegativeVals(arr) {
+  for (var idx = 0; idx < arr.length; idx++) {
+    if (arr[idx] < 0) {
+      arr[idx] = 0;
+    }
+  }
+  return arr;
+}
+
+zeroOutArrayNegativeVals([-2, -1, 0, 1, 2]);
+
+// shift array values forward, leaving 0 at the end
+function shiftArrayValsLeft(arr) {
+  for (var ix = 1; ix < arr.length; ix++) {
+    arr[ix -1] = arr[ix];
+  }
+  arr.length--;
+  return arr;
+}
+
+// correction: arr.length-- didn't add a 0 to the end of the arr
+
+function shiftArrayValsLeft(arr) {
+  for (var ix = 1; ix < arr.length; ix++) {
+    arr[ix -1] = arr[ix];
+  }
+  arr[arr.length - 1] = 0;
+  return arr;
+}
+
+shiftArrayValsLeft([10, 20, 30, 40, 50]);
+
+// replace negative array values with 'Dojo'
+
+function swapStringForArrNegs(arr) {
+  for (var idx = 0; idx < arr.length; i++) {
+    if (arr[idx] < 0) {
+      arr[idx] = 'Dojo!';
+    }
+  }
+  return arr;
+}
+
+// this is fine!
