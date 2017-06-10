@@ -104,3 +104,80 @@ function printMaxOfArray(arr) {
   }
   return Math.max.apply(null, arr);
 }
+
+// prints all odd integers from 1 to 255
+function printOdds1to255() {
+  var num =1;
+  while (num <= 255) {
+    console.log(num + 2);
+  }
+}
+
+// hello! infinite loop time! gotta advance the num each looping
+function printOdds1to255() {
+  var num =1;
+  while (num <= 255) {
+    console.log(num);
+    num+= 2;
+  }
+}
+
+// or use a for loop and and an if statement:
+function printOdds1to255() {
+  var num =1;
+  for (var i = 0; i <= 255; i++) {
+    if (i % 2 !== 0) {
+      console.log(i);
+    }
+  }
+}
+
+printOdds1to255();
+
+// print all values in a given array
+function printArrayVals(arr) {
+  for var idx = 0; i < arr.length; arr++ {
+    console.log('array[',idx,']=',arr[idx] );
+  }
+}
+
+// corrected:
+function printArrayVals(arr) {
+  for (var idx = 0; idx < arr.length; idx++) {
+    console.log('array[',idx,']=',arr[idx] );
+  }
+}
+
+
+printArrayVals([10, 20, 30, 40, 50, 60]);
+
+// analyze an array's values and print the average
+
+arr = [1, 4, 7, 2, 5, 8];
+if (arr.length === 0) {
+  console.log('[], no avg val.');
+  return;
+}
+
+var sum = arr[0];
+for (var idx = 1; idx < arr.length; idx++) {
+  sum += arr[idx];
+}
+console.log('Avg val:', sum / arr.length);
+
+// corrections: needs to be a function, set sum to 0 and not the first item in the array
+
+function printAverageOfArray(array) {
+  if (arr.length === 0) {
+  console.log('[], no avg val.');
+  return;
+}
+
+  var sum = 0;
+  for (var idx = 1; idx < arr.length; idx++) {
+    sum += arr[idx];
+  }
+  console.log('Avg val:', sum / arr.length);
+}
+
+printAverageOfArray(arr);
